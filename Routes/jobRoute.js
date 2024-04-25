@@ -9,8 +9,8 @@ const jobRouter = express.Router()
 // })
 
 jobRouter.post("/create",verifyToken,JobCreate)
-jobRouter.get("/",verifyToken,allJobs)
-jobRouter.get("/singlejob/:id",verifyToken,singleJob)
+jobRouter.get("/",allJobs)
+jobRouter.get("/singlejob/:id",singleJob)
 jobRouter.delete("/:id",verifyToken,deleteJob)
 
 jobRouter.get('/search',verifyToken,searchjobs)
