@@ -7,6 +7,11 @@ PORT = 4000
 require("./helper/dbConnection")
 app.use(express.json())
 
+app.get("/", (req,res)=>{
+res.send("server is Running")
+})
+
+
 app.use('/user',userRoutes)
 app.use('/job',jobRouter)
 
